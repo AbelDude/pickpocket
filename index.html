@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#111318" />
+    <title>Pick Pocket</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="game" aria-label="Pick Pocket game">
+      <section class="street" aria-label="A person walking along a city street">
+        <div class="skyline" aria-hidden="true">
+          <div class="building building--one"></div>
+          <div class="building building--two"></div>
+          <div class="building building--three"></div>
+          <div class="building building--four"></div>
+          <div class="building building--one"></div>
+          <div class="building building--two"></div>
+          <div class="building building--three"></div>
+          <div class="building building--four"></div>
+        </div>
+        <div class="sidewalk" aria-hidden="true"></div>
+        <div class="street-ground" aria-hidden="true"></div>
+        <div class="people" aria-hidden="true"></div>
+        <div class="walker walker--player" aria-label="Player walking to the right">
+          <span class="person-head"></span><span class="person-body"></span>
+          <span class="person-arm person-arm--left"></span><span class="person-arm person-arm--right"></span>
+          <span class="person-leg person-leg--left"></span><span class="person-leg person-leg--right"></span>
+        </div>
+        <div class="street-label" aria-hidden="true">THE WALK</div>
+      </section>
+      <section class="future-space" aria-label="Reserved space for future game features">
+        <button class="game-theme-button" type="button" aria-label="Current theme: City. Activate to change theme.">THEME: CITY</button>
+        <div class="score-board" aria-live="polite">TOTAL STOLEN <strong id="score">$0</strong></div>
+        <div class="attempts-board" role="img" aria-label="3 attempts remaining">
+          <span class="attempt-heart" aria-hidden="true">♥</span>
+          <span class="attempt-heart" aria-hidden="true">♥</span>
+          <span class="attempt-heart" aria-hidden="true">♥</span>
+        </div>
+        <div class="score-feedback" aria-live="polite"></div>
+        <span class="score-hint">MATCH THE ARROW WHEN A BOX IS INSIDE</span>
+        <div class="zone zone--player" aria-hidden="true"></div>
+      </section>
+      <section class="menu-screen" aria-label="Main menu">
+        <div class="menu-buildings" aria-hidden="true">
+          <span class="menu-building menu-building--one"></span>
+          <span class="menu-building menu-building--two"></span>
+          <span class="menu-building menu-building--three"></span>
+          <span class="menu-building menu-building--four"></span>
+          <span class="menu-building menu-building--five"></span>
+        </div>
+        <div class="menu-sidewalk" aria-hidden="true"></div>
+        <div class="menu-road" aria-hidden="true"></div>
+        <div class="menu-content">
+          <span class="menu-eyebrow">A SIDEWALK TIMING GAME</span>
+          <h1>Pick Pocket</h1>
+          <button class="play-button" type="button">PLAY</button>
+          <button class="play-button theme-button" type="button" aria-label="Current theme: City. Activate to change theme.">THEME</button>
+          <button class="play-button rules-button" type="button" aria-expanded="false" aria-controls="rules-overlay">RULES</button>
+        </div>
+        <div class="rules-overlay" id="rules-overlay" role="dialog" aria-modal="true" aria-labelledby="rules-title" aria-hidden="true">
+          <div class="rules-bubble">
+            <span class="rules-eyebrow">THE BASICS</span>
+            <h2 id="rules-title">How to Play</h2>
+            <p>Wait until a pedestrian’s orange rectangle is fully inside your blue rectangle. The arrow appears when it’s in place. Press the matching arrow key to pickpocket them and earn cash.</p>
+            <p>Miss a pickpocket or let someone pass and you lose a heart. Pedestrians get faster for every $50 you steal.</p>
+            <button class="rules-close" type="button">GOT IT</button>
+          </div>
+        </div>
+        <div class="alley-backdrop" aria-hidden="true">
+          <div class="alley-wall alley-wall--left"></div>
+          <div class="alley-wall alley-wall--right"></div>
+          <div class="alley-fire-escape alley-fire-escape--left"></div>
+          <div class="alley-fire-escape alley-fire-escape--right"></div>
+          <div class="alley-lamp"></div>
+        </div>
+      </section>
+      <section class="game-over-screen" aria-label="Game over" aria-hidden="true">
+        <div class="game-over-content">
+          <span class="menu-eyebrow">THAT’S A WRAP</span>
+          <h2>BUSTED</h2>
+          <div class="jail-cell" aria-label="The player is in jail">
+            <div class="jail-character"></div>
+          </div>
+          <p class="final-score">TOTAL STOLEN <strong>$0</strong></p>
+          <div class="game-over-actions">
+            <button class="play-button restart-button" type="button">RESTART</button>
+            <button class="menu-button" type="button">BACK TO MENU</button>
+          </div>
+        </div>
+      </section>
+    </main>
+    <script src="game.js"></script>
+  </body>
+</html>
